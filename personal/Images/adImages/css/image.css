@@ -1,0 +1,47 @@
+*{ margin: 0; padding: 0; }
+#main{ 
+    width: 948px; height: 260px; 
+    position: relative; 
+    border: 5px solid #000; 
+    margin: 30px auto; 
+} 
+#main .tabs{ display: none; }
+#main input.tabs + label div{
+    height: 65px; width: 261px;
+    position: absolute; 
+    background: #414141;
+    filter: Alpha(opacity=80); -moz-opacity: 0.8; opacity: 0.8;
+}
+input.tabs + label dl{ padding: 8px 15px; }
+input.tabs + label dl dt{
+    width:40px; height:48px; 
+    float:left; 
+    padding-right:15px;
+}
+input.tabs + label dl dd.title{
+    font-size:14px; 
+    color:#fff; 
+}
+input.tabs + label dl dd{ 
+    font-family:"微软雅黑"; 
+    color:#E3E3E3; 
+    font-size:12px; 
+    line-height:20px;
+}
+input.tabs:checked + label  dl{ background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(0, 0, 0, .65)), color-stop(1, transparent));}
+
+.tp{ 
+    height:0px; 
+    -webkit-transition:height 0.5s ease; 
+    display:block;
+}
+/* 点击相应的单选框相对应图片按照高度过渡出现 */
+input#tab1:checked ~ #img1{ height:260px; }
+input#tab2:checked ~ #img2{ height:260px; }
+input#tab3:checked ~ #img3{ height:260px; }
+input#tab4:checked ~ #img4{ height:260px; }
+
+input.tabs + label .bg1{ right:0px; top:0px; }
+input.tabs + label .bg2{ right:0px; top:65px; }
+input.tabs + label .bg3{ right:0px; top:130px; }
+input.tabs + label .bg4{ right:0px; top:195px; }
